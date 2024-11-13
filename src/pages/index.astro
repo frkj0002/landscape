@@ -3,13 +3,57 @@ import MainLayout from "../layouts/MainLayout.astro";
 import Button from '../components/Button.astro';
 import Link from '../components/Link.astro';
 import { Image } from 'astro:assets';
-import thumbsup from "../assets/images/thumbsup.png";
+import Hero from "../assets/images/hero.png";
+import Citat from '../components/Citat.astro';
+import Header1 from '../components/Header1.astro';
+import Can from "../assets/images/can.svg";
+import Displayeffekt from "../assets/images/display_3d.png";
+import Moenster from "../assets/images/moenster.svg";
+import Paperbag from "../assets/images/paperbag.png";
+import Phone from "../assets/images/phone.png";
+import Moodboard from "../assets/images/moodboard.png";
+import Grid from "../assets/images/grid.svg";
+import Illustrator from "../assets/images/illustrator.svg";
 ---
-<MainLayout title="Titel">
+<MainLayout title="Landscape">
 	<article>
-		<h1>Index overskrift</h1>
-		<Button>Klik!</Button>
-		<p>Link til <Link href="https://www.kea.dk" target="_blank">En anden side</Link></p>
-		<Image src={thumbsup} alt=""></Image>
+		<section>
+			<Image src={Hero} alt="Billede af landskab med fonten på" class="w-full" format="webp"></Image>
+			<Citat>“en display font inspireret af <br>naturens grønne landskaber”</Citat>
+		</section>
+		<section class="bg-[#CAEBBA] md:grid md:grid-cols-2 py-24 grid gap-y-16" id="om">
+			<div class="content-center px-10 md:px-24">
+				<Header1>om landscape</Header1>
+				<p class="inter-uniquifier text-[#0E460C] md:text-[20px] leading-7">Landscape er en display font inspireret af naturens grønne landskaber, med smukke vidder og bløde bølgende bakker. <br>Fonten lader sig inspirere af det naturrige Odsherred, hvis omrids danner grobund for LANDSCAPES oprindelse. De organiske og runde former afspejler frodig natur og en rolig atmosfære. <br>LANDSCAPE kommer allerbedst til sin ret, når den står alene i fokus, og der ikke sker for meget omkring den. Netop derfor er den god at parre med en neutral sans serif font, som lader display fontens former skinne igennem. <br>Fonten kan tilpasses forskellige visuelle udtryk og tilføre en ægte, organisk dybde til designet.</p>
+			</div>
+			<div class="flex flex-col px-10 md:px-24">
+				<div class="flex md:justify-center md:gap-24 w-2/4 md:w-full">
+					<Image src={Moenster} alt="Mønster formet af L" class=""></Image>
+					<Image src={Phone} alt="Telefon med ordet Escape" class=""></Image>
+				</div>
+				<div class="flex md:justify-center md:gap-24 w-2/4 md:w-full">
+					<Image src={Paperbag} alt="En papairspose med fonten påtrykt gentagende gange" class=""></Image>
+					<Image src={Can} alt="Mønster dannet ved hjælpe af bogstaverne C, A og N" class=""></Image>
+				</div>
+				<Image src={Displayeffekt} alt="Fonten tilføjet en grøn 3d-effekt" class=""></Image>
+			</div>
+		</section>
+		<section>
+			<Citat>"en font der bringer <br>naturen tættere på"</Citat>
+		</section>
+		<section class="bg-[#CAEBBA] md:grid md:grid-cols-2 py-24 grid gap-y-16" id="proces">
+			<div class="px-10 md:px-24 flex flex-col gap-y-24">
+				<div class="flex md:gap-24 w-2/4 md:w-full">
+					<Image src={Moodboard} alt="Moodboard"></Image>
+					<Image src={Grid} alt="Grid"></Image>
+				</div>
+				<Image src={Illustrator} alt="Eksempel fra Illustrator"></Image>
+			</div>
+			<div class="content-center px-10 md:px-24">
+				<Header1>proces</Header1>
+				<p class="inter-uniquifier text-[#0E460C] md:text-[20px] leading-7">Landscape er en font der bringer naturen tættere på - bogstaveligt talt. <br>Formgivningen tager nemlig udgangspunkt på formerne i Odsherreds landskab, som jeg har ladet mig inspirere af. <br>Fonten lader sig også inspirere fra andre fonte. De runde, organiske former bliver ofte set i sammenhæng med tekster, der omhandler naturen, landskaberne og jorden. <br>Bogstaverne i fonten er tegnet efter formerne på Odsherred ved hjælp af et selvtegnet grid. <br>Udtrykket på bogstaverne er opstået ved at lege og eksperimentere med strokes.</p>
+			</div>
+		</section>
+		
 	</article>
 </MainLayout>
