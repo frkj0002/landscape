@@ -1,8 +1,49 @@
 ---
 ---
-<div class="flex justify-end px-10 py-10 gap-12">
-    <a href="#om" class="inter-uniquifier">om landscape</a>
-    <a href="#proces" class="inter-uniquifier">proces</a>
+<!-- <div x-data="{ showmenu: false }" class="">
+    <div id="desktopmenu hidden lg:block">
+        <div class="flex justify-end px-10 py-10 gap-12 ">
+            <a href="#om" class="inter-uniquifier">om landscape</a>
+            <a href="#proces" class="inter-uniquifier">proces</a>
+        </div>
+        <button id="burgermenu" class="lg:hidden" x-on:click="showmenu = ! showmenu">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20" stroke-width="1.5" stroke="#DB901B" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" /></svg>
+        </button>
+    </div>
+    
+
+    <div id="mobilmenu" class="flex flex-row content-center pt-4" 
+    x-show="showmenu" x-transition x-on:click="showmenu = false" x-on:click.outside="showmenu = false">
+    <div>
+        <a href="#om" class="inter-uniquifier">om landscape</a>
+        <a href="#proces" class="inter-uniquifier">proces</a>
+    </div>
+    </div>
+</div> -->
+
+<div  x-data="{ showmenu: false }" class="px-10 py-10">
+    <div id="navbar" class="">
+        <nav id="desktopmenu" class="hidden lg:block">
+            <ul class="flex justify-end gap-12">
+                <li><a href="#om" class="inter-uniquifier">om landscape</a></li>
+                <li><a href="#proces" class="inter-uniquifier">proces</a></li>
+            </ul>
+        </nav>
+        <button id="burgermenu" class="lg:hidden" x-on:click="showmenu = ! showmenu">
+            <svg xmlns="http://www.w3.org/2000/svg" width="46" height="46" viewBox="0 0 46 46" fill="none">
+                <path d="M5.75 11.5H40.25M5.75 23H40.25M5.75 34.5H40.25" stroke="#CAEBBA" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+
+        </button>
+    </div>
+
+    <nav id="mobilmenu" class="flex flex-row content-center" x-show="showmenu" x-transition x-on:click="showmenu = false" x-on:click.outside="showmenu = false">
+        <ul>
+            <li><a href="#om" class="inter-uniquifier">om landscape</a></li>
+            <li><a href="#proces" class="inter-uniquifier">proces</a></li>
+        </ul>
+    </nav>
 </div>
 
 <style>
